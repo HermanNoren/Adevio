@@ -1,0 +1,14 @@
+.end_circle_container {
+  position: relative;
+  width: 100%;
+}
+
+.end_circle {
+  position: absolute;
+  height: 1550%;
+  width: 120%;
+  left: -10%;
+  background-color: var(--dark-blue);
+  border-radius: 0% 00% 50% 50%;
+  z-index: 1;
+}

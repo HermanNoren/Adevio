@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* =============== VARIABLES CSS =============== */
+:root {
+  --header-height: 3rem;
+
+  /* ========== Colors ========== */
+  --light-beige: rgb(250, 250, 249);
+  --beige: rgb(209, 209, 199);
+  --dark-beige: rgb(112 112 92);
+  --light-gray: rgb(95, 95, 95);
+  --gray: rgb(38, 38, 38);
+  --dark-gray: rgb(14, 14, 12);
+  --background: rgb(250, 250, 249);
+
+  --white: rgb(255, 255, 255);
+  --grey: rgb(131, 140, 151);
+  --gray-blue: rgb(31, 35, 41);
+  --dark-gray: rgb(14, 14, 12);
+  --off-white: rgb(230, 236, 244);
+  --dark-blue: rgb(13, 17, 24);
+  --purple: rgb(125, 114, 255);
+  --green: rgb(58, 178, 76);
+  --cyan: rgb(50, 180, 174);
+  --pink: rgb(247, 120, 186);
+
+  /* ========== Font and typography ========== */
+  --body-font: "Roboto", sans-serif;
+  --body-font: "Roboto Mono", monospace;
+  --body-font: "Noto Sans", sans-serif;
+
+  /* .5rem = 8px | 1rem = 16px ... */
+  --slider-font-size: 8rem;
+  --header-font-size: 5rem;
+  --big-font-size: 3.5rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+  --tiny-font-size: 0.625rem;
+  --navlogo-font-size: 1rem;
+  --navlink-font-size: 0.875rem;
+
+  /* ========== Font weight ========== */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /* ========== Margenes Button ========== */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /* ========== z index ========== */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-transition: 199;
+  --z-burger-menu: 200;
+  --z-modal: 1000;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+  :root {
+    --big-font-size: 2.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --mb-0-25: 0.25rem;
+    --mb-0-5: 0.5rem;
+    --mb-0-75: 0.75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+  }
+}
+
+/* =============== BASE =============== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: auto;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--dark-blue);
+  color: var(--off-white);
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =============== REUSABLE CSS CLASSES =============== */
+
+.z1 {
+  position: relative;
+  z-index: 1;
+}
+
+.section {
+  padding: 4rem 0 4rem;
+  display: grid;
+  place-items: center;
+}
+
+.circle_section {
+  display: grid;
+  place-items: center;
+}
+
+.section_title {
+  display: block;
+  font-size: var(--big-font-size);
+  margin-bottom: 4rem;
+}
+
+.section_subtitle {
+  font-size: var(--h3-font-size);
+}
+
+.section_title,
+.section_subtitle {
+  text-align: center;
+}
+
+.title {
+  font-size: var(--h1-font-size);
+  font-weight: normal;
+}
+
+.content {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+/* =============== LAYOUT =============== */
+.container {
+  max-width: 90vw;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* =============== BUTTONS =============== */
+.button,
+.button_round {
+  display: block;
+  background: var(--purple);
+  color: var(--off-white);
+  border-radius: 100px;
+  border: 1px solid var(--purple);
+  transition: 0.3s ease-in-out;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+}
+
+.button_round {
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+
+.button:hover,
+.button_round:hover {
+  background: transparent;
+  color: var(--off-white);
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}

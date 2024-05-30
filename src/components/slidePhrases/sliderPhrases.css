@@ -1,0 +1,28 @@
+.slidep_container {
+  position: relative;
+  height: calc(var(--slider-font-size) * 5);
+  pointer-events: none;
+  background-color: var(--dark-blue);
+}
+
+.slidep_content {
+  position: absolute;
+}
+
+.slidep_slider {
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.slidep_phrase_container {
+  display: flex;
+  gap: 5;
+  padding: 0 1rem;
+  place-items: center;
+}
+
+.slidep_phrase {
+  font-size: var(--slider-font-size);
+}

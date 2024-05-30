@@ -1,0 +1,65 @@
+.cta_section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark-blue);
+  background-color: hsla(218, 29%, 7%, 1);
+  background-image: radial-gradient(
+      at 22% 100%,
+      hsla(328, 87%, 71%, 0.14) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 92% 83%, hsla(129, 50%, 46%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 21% 2%, hsla(177, 56%, 45%, 0.2) 0px, transparent 50%);
+}
+
+.cta_line div svg path {
+  stroke: var(--off-white) !important;
+}
+
+.cta_container {
+  height: 100%;
+  width: 100%;
+}
+
+.cta_content {
+  display: grid;
+  gap: 0;
+  grid-template-rows: 1fr 1px 1fr;
+}
+
+.cta_titles {
+  display: grid;
+  align-content: end;
+}
+
+.cta_globe_container {
+  position: absolute;
+  z-index: -1;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cta_globe {
+  opacity: 0.6;
+}
+
+.cta_title {
+  color: var(--off-white);
+  font-size: var(--big-font-size);
+  margin-bottom: 4rem;
+}
+
+.cta_subtitle {
+  color: var(--grey);
+  font-size: var(--h3-font-size);
+  margin-bottom: 1rem;
+}
+
+.cta_button_container {
+  margin-top: 4rem;
+  display: flex;
+}
+
+.cta_button {
+  position: relative;
+}

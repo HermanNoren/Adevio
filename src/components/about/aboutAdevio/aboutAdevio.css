@@ -1,0 +1,27 @@
+.adevio_section {
+  background-color: var(--dark-blue);
+}
+
+.adevio_content {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.adevio_title {
+  grid-column: 1 / 3;
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-normal);
+}
+
+.adevio_button_container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  height: 0;
+  margin: 4rem 0;
+  z-index: 10;
+}
+
+.adevio_button {
+  position: relative;
+}

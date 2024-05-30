@@ -1,0 +1,19 @@
+.about_hero_section {
+  position: relative;
+  background-color: var(--dark-blue);
+}
+
+.about_hero_container {
+  width: 100%;
+}
+
+.about_hero_content {
+  margin-top: 8rem;
+}
+
+.about_title {
+  display: block;
+  text-align: left;
+  font-size: var(--header-font-size);
+  width: 55vw;
+}

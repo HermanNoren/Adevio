@@ -1,0 +1,35 @@
+.about_me_section {
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+  background-color: var(--dark-blue);
+}
+
+.about_me_content {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.dFirst {
+  order: 0;
+  grid-column: 1 / 3;
+}
+
+.dSecond {
+  order: 1;
+  grid-column: 4 / 7;
+}
+
+.imgFirst {
+  order: 0;
+  grid-column: 1 / 4;
+}
+
+.imgSecond {
+  order: 1;
+  grid-column: 3 / 6;
+}
+
+.about_me_img {
+  background-color: var(--gray-blue);
+  width: 100%;
+  height: 700px;
+}

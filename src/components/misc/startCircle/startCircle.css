@@ -1,0 +1,16 @@
+.start_circle_container {
+  position: relative;
+  width: 100%;
+}
+
+.start_circle {
+  position: absolute;
+  height: 1550%;
+  width: 120%;
+  left: -10%;
+  top: -700%;
+  background-color: var(--dark-blue);
+  border-radius: 50% 50% 0% 0%;
+  transform: translateZ(0);
+  z-index: 1;
+}

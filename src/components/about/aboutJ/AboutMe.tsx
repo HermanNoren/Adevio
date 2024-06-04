@@ -21,9 +21,9 @@ export default function AboutMe({
 
   const { scrollYProgress: scrollYProgressButton } = useScroll({
     target: container,
-    offset: ["start end", "end start"],
+    offset: ["start 50%", "end start"],
   });
-  const y = useTransform(scrollYProgressButton, [0, 1], [0, 150]);
+  const y = useTransform(scrollYProgressButton, [0, 1], [0, 600]);
   return (
     <section ref={container} className="about_me_section section z1">
       <div className="about_me_container container grid">

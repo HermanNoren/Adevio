@@ -28,7 +28,7 @@ function Hero() {
     gsap.registerPlugin(ScrollTrigger);
     requestAnimationFrame(textAnimation);
 
-    gsap.to(slider.current, {
+    let g = gsap.to(slider.current, {
       scrollTrigger: {
         trigger: document.documentElement,
         start: 0,
@@ -38,6 +38,10 @@ function Hero() {
       },
       x: "-=300px",
     });
+
+    return () => {
+      g.kill();
+    };
   }, []);
 
   const textAnimation = () => {

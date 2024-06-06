@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useEffect } from "react";
@@ -66,7 +66,7 @@ function Hero() {
 
   const sliderText = " ADEVIO - ADEVIO - ADEVIO - ADEVIO -";
   return (
-    <motion.section
+    <m.section
       ref={ref}
       style={{ y: heroPosY }}
       className="hero_section section"
@@ -85,7 +85,7 @@ function Hero() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </m.section>
   );
 }
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import "./curve.css";
 
 const anim = (variants: any) => {
@@ -58,9 +58,9 @@ export default function Curve({ children }: { children: any }) {
 
   return (
     <div className="curve">
-      <motion.p {...anim(text)} className="curve_route">
+      <m.p {...anim(text)} className="curve_route">
         Adevio
-      </motion.p>
+      </m.p>
       <div
         style={{
           opacity: dimensions.width > 0 ? 0 : 1,
@@ -136,8 +136,8 @@ function SVG({ width, height }: { width: number; height: number }) {
   };
 
   return (
-    <motion.svg {...anim(slide)}>
-      <motion.path {...anim(curve)}></motion.path>
-    </motion.svg>
+    <m.svg {...anim(slide)}>
+      <m.path {...anim(curve)}></m.path>
+    </m.svg>
   );
 }

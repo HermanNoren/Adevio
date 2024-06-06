@@ -1,23 +1,23 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
 import "./endCircle.css";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 function EndCircle() {
   const ref = useRef(null);
   // Circle
-  const { scrollYProgress: h } = useScroll({
+  const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
   });
-  const height = useTransform(h, [0, 1], [30, 0]);
+  const height = useTransform(scrollYProgress, [0, 1], [20, 0]);
 
   return (
-    <>
+    <div>
       <div ref={ref} className=""></div>
-      <motion.div style={{ height }} className="end_circle_container">
+      <m.div style={{ height }} className="end_circle_container">
         <div className="end_circle"></div>
-      </motion.div>
-    </>
+      </m.div>
+    </div>
   );
 }
 

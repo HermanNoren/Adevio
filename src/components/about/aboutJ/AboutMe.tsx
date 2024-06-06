@@ -1,5 +1,5 @@
 import "./aboutMe.css";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 export default function AboutMe({
@@ -28,14 +28,11 @@ export default function AboutMe({
     <section ref={container} className="about_me_section section z1">
       <div className="about_me_container container grid">
         <div className="about_me_content content grid">
-          <motion.div
-            style={{ y }}
-            className={`about_me_desc_container ${dOrder}`}
-          >
+          <m.div style={{ y }} className={`about_me_desc_container ${dOrder}`}>
             <h2 className="about_me_name">{name}</h2>
             <p className="about_me_role">{role}</p>
             <p className="about_me_desc">{description}</p>
-          </motion.div>
+          </m.div>
           <img src={imgPath} alt="" className={`about_me_img ${imgOrder}`} />
         </div>
       </div>

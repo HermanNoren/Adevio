@@ -1,6 +1,6 @@
 import { m, useScroll, useTransform } from "framer-motion";
 import "./endCircle.css";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 function EndCircle() {
   const ref = useRef(null);

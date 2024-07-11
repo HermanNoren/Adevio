@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import "./modal.css";
@@ -73,7 +73,7 @@ function Modal({ modal, services }: { modal: any; services: any }) {
 
   return (
     <>
-      <motion.div
+      <m.div
         ref={container}
         variants={scaleAnimation}
         initial={"initial"}
@@ -97,15 +97,15 @@ function Modal({ modal, services }: { modal: any; services: any }) {
             );
           })}
         </div>
-      </motion.div>
-      <motion.div
+      </m.div>
+      <m.div
         variants={scaleAnimation}
         initial={"initial"}
         animate={active ? "open" : "closed"}
         ref={cursor}
         className="cursor"
-      ></motion.div>
-      <motion.div
+      ></m.div>
+      <m.div
         variants={scaleAnimation}
         initial={"initial"}
         animate={active ? "open" : "closed"}
@@ -113,7 +113,7 @@ function Modal({ modal, services }: { modal: any; services: any }) {
         className="cursor_label"
       >
         Mer
-      </motion.div>
+      </m.div>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useEffect } from "react";
@@ -28,7 +28,7 @@ function Hero() {
     gsap.registerPlugin(ScrollTrigger);
     requestAnimationFrame(textAnimation);
 
-    gsap.to(slider.current, {
+    let g = gsap.to(slider.current, {
       scrollTrigger: {
         trigger: document.documentElement,
         start: 0,
@@ -38,6 +38,10 @@ function Hero() {
       },
       x: "-=300px",
     });
+
+    return () => {
+      g.kill();
+    };
   }, []);
 
   const textAnimation = () => {
@@ -62,7 +66,7 @@ function Hero() {
 
   const sliderText = " ADEVIO - ADEVIO - ADEVIO - ADEVIO -";
   return (
-    <motion.section
+    <m.section
       ref={ref}
       style={{ y: heroPosY }}
       className="hero_section section"
@@ -81,7 +85,7 @@ function Hero() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </m.section>
   );
 }
 

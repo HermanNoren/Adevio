@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { m, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import "./cta.css";
 import Globe1 from "../../utils/globe/Globe1";
@@ -16,7 +16,7 @@ function CTA() {
   const ctaPosY = useTransform(scrollYProgress, [0, 1], ["-50%", "0%"]);
 
   return (
-    <motion.section
+    <m.section
       ref={section}
       style={{ y: ctaPosY }}
       className="cta_section section"
@@ -47,7 +47,7 @@ function CTA() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </m.section>
   );
 }
 

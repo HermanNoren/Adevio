@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useRef, useState } from "react";
 
 export default function Magnetic({ children }: { children: any }) {
@@ -22,13 +22,13 @@ export default function Magnetic({ children }: { children: any }) {
   const { x, y } = position;
 
   return (
-    <motion.div
+    <m.div
       onMouseMove={mouseMove}
       onMouseLeave={mouseLeave}
       ref={ref}
       animate={{ x, y }}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 }

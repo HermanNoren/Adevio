@@ -1,5 +1,5 @@
 import "./maskText.css";
-import { m, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 export default function MaskText({ phrases }: { phrases: any }) {
@@ -23,14 +23,14 @@ export default function MaskText({ phrases }: { phrases: any }) {
       {phrases.map((phrase: any, index: number) => {
         return (
           <div key={index} className="mask_text">
-            <m.p
+            <motion.p
               custom={index}
               variants={animation}
               initial="initial"
               animate={isInView ? "enter" : "initial"}
             >
               {phrase}
-            </m.p>
+            </motion.p>
           </div>
         );
       })}

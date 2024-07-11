@@ -1,4 +1,4 @@
-import { m, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import "./startCircle.css";
 
@@ -9,15 +9,15 @@ function StartCircle() {
     target: ref,
     offset: ["start start", "start end"],
   });
-  const height = useTransform(h, [0, 1], [30, 0]);
+  const height = useTransform(h, [0, 1], [50, 0]);
 
   return (
-    <div>
-      <m.div style={{ height }} className="start_circle_container">
+    <>
+      <motion.div style={{ height }} className="start_circle_container">
         <div className="start_circle"></div>
-      </m.div>
+      </motion.div>
       <div ref={ref} className=""></div>
-    </div>
+    </>
   );
 }
 

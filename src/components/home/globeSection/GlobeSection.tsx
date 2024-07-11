@@ -1,6 +1,6 @@
 import Globe1 from "../../../utils/globe/Globe1";
 import { useRef } from "react";
-import { m, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import "./globeSection.css";
 import Logo from "/nylogga.svg";
 
@@ -22,7 +22,12 @@ const GlobeSection = () => {
           <div className=""></div>
           <div className="gs_text_container container grid">
             <div className="gs_text_content grid">
-              <m.img src={Logo} alt="" style={{ rotate }} className="gs_logo" />
+              <motion.img
+                src={Logo}
+                alt=""
+                style={{ rotate }}
+                className="gs_logo"
+              />
               <h1 className="gs_title title">
                 Ta ditt varumärke till den digitala världen
               </h1>

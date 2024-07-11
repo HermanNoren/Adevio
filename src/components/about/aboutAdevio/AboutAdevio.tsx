@@ -1,5 +1,5 @@
 import "./aboutAdevio.css";
-import { m, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Magnetic from "../../../utils/Magnetic";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
@@ -29,13 +29,13 @@ export default function AboutAdevio() {
         <div className="adevio_button_container content">
           <div className=""></div>
           <div className=""></div>
-          <m.div style={{ y }} className="">
+          <motion.div style={{ y }} className="">
             <Magnetic>
               <Link to="kontakt" className="adevio_button button_round">
                 Kontakta Oss
               </Link>
             </Magnetic>
-          </m.div>
+          </motion.div>
         </div>
       </div>
     </section>

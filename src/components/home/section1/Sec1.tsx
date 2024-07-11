@@ -1,4 +1,4 @@
-import { useScroll, m, useTransform } from "framer-motion";
+import { useScroll, motion, useTransform } from "framer-motion";
 import "./sec1.css";
 import { useRef } from "react";
 import WobblyLine from "../../misc/WobblyLine";
@@ -39,13 +39,13 @@ function Sec1() {
         <div className="button_container content">
           <div className=""></div>
           <div className=""></div>
-          <m.div style={{ y }} className="">
+          <motion.div style={{ y }} className="">
             <Magnetic>
               <Link to="kontakt" className="sec1_button button_round">
                 Kontakta Oss
               </Link>
             </Magnetic>
-          </m.div>
+          </motion.div>
         </div>
         <WobblyLine />
       </div>

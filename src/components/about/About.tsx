@@ -55,9 +55,6 @@ function Home() {
         phrase1={"Digital Marknadsföring -"}
         phrase2={"Webbutveckling -"}
         phrase3={"Adevio hjälper dig -"}
-        clr1="green"
-        clr2="pink"
-        clr3="purple"
       />
       <EndCircle />
       <CTA />

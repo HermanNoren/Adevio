@@ -26,19 +26,3 @@
 .slidep_phrase {
   font-size: var(--slider-font-size);
 }
-
-.slidep_purple {
-  color: var(--purple);
-}
-
-.slidep_green {
-  color: var(--green);
-}
-
-.slidep_cyan {
-  color: var(--cyan);
-}
-
-.slidep_pink {
-  color: var(--pink);
-}

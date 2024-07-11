@@ -6,7 +6,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
 import PageNotFound from "./components/404/PageNotFound";
-import { AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const location = useLocation();
@@ -26,18 +26,16 @@ function App() {
 
   return (
     <>
-      <LazyMotion features={domAnimation} strict>
-        <Header />
-        <main className="main">
-          <AnimatePresence mode="wait">
-            <Routes location={location} key={location.pathname}>
-              <Route path="/" element={<Home />} />
-              <Route path="/om-oss" element={<About />} />
-              <Route path="*" element={<PageNotFound />} />
-            </Routes>
-          </AnimatePresence>
-        </main>
-      </LazyMotion>
+      <Header />
+      <main className="main">
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/om-oss" element={<About />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+        </AnimatePresence>
+      </main>
     </>
   );
 }
